@@ -32,61 +32,34 @@ export default function Footer() {
   return (
     <Stack
       display="grid"
-      gridTemplateRows="1.7fr 1fr"
       sx={{
         height: "750px",
         marginTop: "80px",
-        background:
-          "linear-gradient(transparent, rgb(222, 185, 212), rgba(43, 84, 138, 0.8) 80%)",
-        position: "relative", // Add position property
+        backgroundImage: "url(/assets/footer1.png)",
+        backgroundSize: "inherit",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      <Grid
-        sx={{
-          position: "absolute",
-          bottom: 0,
-          width: "100%",
-          transform: "translateY(0%)",
-          zIndex: 500,
-        }}
-      >
-        <img
-          src="assets/photo3.svg"
-          alt="photo3"
-          style={{
-            maxWidth: "100%",
-            display: "block",
-          }}
-        />
-      </Grid>
-      <Grid
-        container
-        item
-        sx={{
-          backgroundColor: "rgb(36, 73, 119)",
-          height: "100%",
-          alignItems: "center",
-          position: "relative",
-        }}
-      >
+      <Grid container item sx={{ marginTop: "560px" }}>
         <Grid
           item
           xs={4}
-          sx={{ justifySelf: "end", zIndex: 500, position: "relative" }}
+          sx={{
+            justifySelf: "end",
+          }}
         >
-          <Stack component="nav" sx={{ position: "static" }}>
+          <Stack component="nav" sx={{ position: "static", float: "right" }}>
             {LINKS.map((list) => (
-              <Stack
-                key={list.id}
-                sx={{ fontSize: "24px", textTransform: "capitalize" }}
-              >
+              <Stack key={list.id} sx={{ textTransform: "capitalize" }}>
                 <Typography
                   sx={{
-                    fontFamily: "GazeNozarashi, system-ui, cursive",
+                    fontSize: "24px",
+                    fontFamily: "GazeNozarashi,  cursive",
                     letterSpacing: "0px",
-                    fontWeight: 600,
+                    fontWeight: 400,
                     width: "fit-content",
                     color: "rgba(236, 246, 250, 0.93)",
+                    lineHeight: 1.6,
                   }}
                 >
                   {list.name}
@@ -95,12 +68,14 @@ export default function Footer() {
             ))}
           </Stack>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={8} sx={{ marginTop: "64px" }}>
           <Typography
             sx={{
               fontSize: "22px",
               color: "rgb(207, 215, 225)",
               fontFamily: "GazeNozarashi, cursive",
+              textAlign: "start",
+              paddingLeft: "100px",
             }}
           >
             e-mail: andrewnakamura147@gmail.com <br />

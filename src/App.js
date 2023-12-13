@@ -208,7 +208,6 @@ function App() {
             backgroundSize: "inherit",
             backgroundRepeat: "no-repeat",
             height: "100vh",
-            width0: "100vh",
           }}
         >
           <Stack
